@@ -1,0 +1,8 @@
+.ant-btn-primary{
+    background-color: #0271ba !important;
+}
+
+:where(.css-dev-only-do-not-override-1okl62o).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    color: #fff;
+    background-color: #1dc2f3 !important;
+}
