@@ -16,7 +16,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useClearTokenMutation } from '../../../../services/auth.service';
 // eslint-disable-next-line @typescript-eslint/ban-types
 const debounce = (func: Function, delay: number) => {
-   let timeoutId: NodeJS.Timeout;
+   let timeoutId: number;
    return (...args: any[]) => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import OrderDetail from './components/orderDetail';
 import OrderNote from './components/orderNote';
 import OrderCheckOut from './components/orderCheckOut';
-import { Button, ConfigProvider, Modal, Steps, message, notification } from 'antd';
+import { Button, ConfigProvider, Modal, Steps, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';

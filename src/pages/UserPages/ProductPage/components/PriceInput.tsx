@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { FilterFieldContext } from '../ProductPage';
 
 const debounce = (func: Function, delay: number) => {
-   let timeoutId: NodeJS.Timeout;
+   let timeoutId: number;
 
    return (...args: any[]) => {
       clearTimeout(timeoutId);

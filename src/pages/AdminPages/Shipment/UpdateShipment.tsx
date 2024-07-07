@@ -3,7 +3,7 @@ import { useGetAllWithoutExpandQuery } from "../../../services/product.service";
 import { useGetOneShipmentQuery, useUpdateShipmentMutation } from "../../../services/shipment.service";
 import useFormProductInShipment from "../../../hooks/useFormProductInShipment";
 import { message } from "antd";
-import { InputShipment, ProductInput } from "../../../interfaces/shipment";
+import { InputShipment} from "../../../interfaces/shipment";
 import { useDispatch } from "react-redux";
 import { useClearTokenMutation } from "../../../services/auth.service";
 import { deleteTokenAndUser } from "../../../slices/authSlice";

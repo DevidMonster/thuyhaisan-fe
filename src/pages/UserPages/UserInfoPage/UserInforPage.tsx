@@ -90,6 +90,7 @@ const UserInfoPage = () => {
          await updateUser(object)
             .unwrap()
             .then((res) => {
+               console.log(res);
                message.success('Cập nhật thông tin thành công');
                dispatch(updateInfoUser(data));
             }).catch((err) => {

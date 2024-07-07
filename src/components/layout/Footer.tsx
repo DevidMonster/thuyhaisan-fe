@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { SearchOutlined, UserOutlined } from '@ant-design/icons';
-import bgFooter from '../../assets/images/bg_footer.png';
 import { BiStore } from 'react-icons/bi';
 import { BsBell } from 'react-icons/bs';
 import { HiOutlineShoppingBag, HiOutlineTrash } from 'react-icons/hi2';
 import { FaXmark } from 'react-icons/fa6';
-import { FaArrowUp, FaPlus, FaWindowMinimize, FaInstagram } from 'react-icons/fa';
+import { FaArrowUp, FaPlus, FaWindowMinimize } from 'react-icons/fa';
 import { FiHeadphones, FiLogOut, FiLogIn } from 'react-icons/fi';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
@@ -44,7 +43,7 @@ const Footer = () => {
    const { data: cartdb, refetch: refetchCart } = useGetCartQuery(undefined, { skip: !auth.user?._id });
    const scrollRef = useRef<HTMLDivElement | null>(null);
    const CartLocal = useSelector((state: { cart: ICartSlice }) => state?.cart.products);
-   const totalPrice = useSelector((state: { cart: ICartSlice }) => state?.cart.totalPrice);
+   // const totalPrice = useSelector((state: { cart: ICartSlice }) => state?.cart.totalPrice);
    const cart = auth.user?._id ? cartdb?.body.data.products : CartLocal;
    const { data: clientNotification, refetch: refetchNoti } = useGetClientNotificationQuery(auth?.user?._id);
    const voucher = useSelector((state: { vouchersReducer: IVoucher }) => state.vouchersReducer);
@@ -151,9 +150,12 @@ const Footer = () => {
          } else {
             setDiscount((subtotal * voucher.percent) / 100);
          }
+         console.log(discount);
       }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [data, subtotal, voucher]);
    const [messages, setMesssages] = useState<string>();
+   // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
    const { data: chat, refetch } = useGetOneChatUserQuery(auth.user?._id!, {
       skip: !auth.user?._id || auth.user?.role == 'admin'
    });

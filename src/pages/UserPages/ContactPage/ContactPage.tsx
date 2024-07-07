@@ -16,7 +16,7 @@ const ContactPage = () => {
          ...values,
          subject: "message from " + values.email,
       })
-         .catch(e => message.error("Đã có lỗi trong quá trình gửi"))
+         .catch(() => message.error("Đã có lỗi trong quá trình gửi"))
 
       if (data.status === 201) {
          message.success("Đã gửi thông tin")

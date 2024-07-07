@@ -1,12 +1,9 @@
 import BannerHomePage from './components/BannerHomePage';
-import SlideCateHomePage from './components/SlideCategoriesHomePage';
 import '../../../css/hompage.css';
-import SlideProductHomepage from './components/SlideProductHomePage';
 import MyService from './components/MyService';
 import BannerSales from './components/BannerSales';
 import BestSellerProducts from './components/BestSellerProducts';
-import HappyClient from './components/HappyClient';
-import { useGetAllLiquidationProductQuery, useGetNewProductInStorageQuery, useGetProductSoldDescLimitQuery } from '../../../services/product.service';
+// import { useGetAllLiquidationProductQuery, useGetNewProductInStorageQuery, useGetProductSoldDescLimitQuery } from '../../../services/product.service';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { message } from 'antd';
@@ -14,9 +11,9 @@ import { useGetAllCateQuery } from '../../../services/cate.service';
 import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
-   const { data: liquidationProducts } = useGetAllLiquidationProductQuery()
-   const { data: ProductSoldBest } = useGetProductSoldDescLimitQuery()
-   const { data: NewProduct } = useGetNewProductInStorageQuery()
+   // const { data: liquidationProducts } = useGetAllLiquidationProductQuery()
+   // const { data: ProductSoldBest } = useGetProductSoldDescLimitQuery()
+   // const { data: NewProduct } = useGetNewProductInStorageQuery()
    const { data: CategoriesList } = useGetAllCateQuery({})
    const [error, setError] = useState<number | null>(null)
 
