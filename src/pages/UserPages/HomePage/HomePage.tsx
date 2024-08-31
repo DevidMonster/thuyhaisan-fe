@@ -42,15 +42,16 @@ const HomePage = () => {
                   navigate('/')
                }
             }
-         } else {
-            const queryString = [...searchParams.entries()]
-               .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-               .join('&');
+         } 
+         // else {
+         //    const queryString = [...searchParams.entries()]
+         //       .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+         //       .join('&');
 
-            // Kết quả
-            const result = `?${queryString}`;
-            navigate('/vnpay_return' + result)
-         }
+         //    // Kết quả
+         //    const result = `?${queryString}`;
+         //    navigate('/vnpay_return' + result)
+         // }
       }
    }, [location, navigate]);
    return (
